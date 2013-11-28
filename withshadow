@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>SadFace with shadow</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		.blueScreen {
+			position: fixed;
+			top: 0px; bottom: 0px;
+			left: 0px; right: 0px;
+			z-index: 999;
+			background-color: rgb(31,103,179);
+		}
+		.blueScreen .errorWrapper {
+			margin: auto;
+			width: 60%;
+			position: absolute;
+			top: 50%; left: 50%;
+			-webkit-transform: translate(-50%,-50%);
+			  -ms-transform: translate(-50%,-50%);
+				  transform: translate(-50%,-50%);
+			color: #ffffff;
+			font-family: "Open Sans","Segoe UI light","Segoe WP light","Helvetica Neue",sans-serif;
+		}
+		
+		.blueScreen .errorWrapper .sadNotice {
+			margin-top: 3em;
+			font-size: 1.1em;
+		}
+		
+		.blueScreen .errorWrapper .sadMsg {
+			font-size: 1.5em;
+		}
+		
+		.blueScreen .errorWrapper .sadFace {
+			font-size: 11em;
+			line-height: 1em;
+		}
+		.blueScreen .errorWrapper .sadNotice .social {
+			color: white;
+			text-decoration: none;
+		}
+		.blueScreen .errorWrapper .sadNotice .social:hover {
+			color: gold;
+			border-bottom: 1px gold solid;
+		}
+		.contenteditable:hover {
+			background-color: rgba(255,255,255,0.4);
+		}
+	</style>
+</head>
+<body>
+	<div class="blueScreen blueScreenRotation">
+		<div class="errorWrapper">
+			<div class="sadFace contenteditable" contenteditable="true" spellcheck="false">LOLOL</div>
+			<br />
+			<div class="sadMsg contenteditable" contenteditable="true" spellcheck="false"><span style="background: rgba(31,103,179,0.8);">What is better than a blue screen of death? huh, a customizable blue screen of laugh??</span></div>
+			<div class="sadNotice contenteditable" contenteditable="true" spellcheck="false">If you'd like to contact Tommy, you can find him on: <a href="https://twitter.com/TommyZoo1929" target="_blank" class="social" title="Twitter">Twitter</a>/<a href="https://www.facebook.com/heros.ku" target="_blank" class="social" title="Facebook">Facebook</a><noscript><br />Moreover, turn the script on, it is required for awesomeness.</noscript></div>
+		</div>
+	</div>
+	<script>
+		var $sf = document.getElementsByClassName("sadFace")[0];
+		var styleStr = "rgb(20,67,118) 0px 0px,";
+		for (var i=1; i<2000; i++)
+			styleStr += "rgb(20,67,118) "+i+"px "+i+"px,";
+		styleStr += "rgb(20,67,118) 2000px 2000px";
+		$sf.style.textShadow = styleStr;
+	</script>
+</body>
+</html>
